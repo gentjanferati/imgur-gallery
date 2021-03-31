@@ -1,0 +1,54 @@
+import React from 'react';
+import './card.styles.css'
+
+
+function Card({title, description, downs, images, layout, type, link, ...otherProps}){
+    
+    
+
+    if(images != null){
+        const str1 = "video/mp4"
+        let str2 = images[0].type
+        console.log(str2)
+        let str = str1.localeCompare(str2)
+        console.log(str)
+        let imglink = images[0].link;
+        console.log(imglink)
+        if(type !== null ){
+            console.log("linkuuuuuuuuuuuuuu" + link)
+        }
+        // eslint-disable-next-line
+        let video = true;
+        if(str !== 0 ){
+            video = false;
+            console.log(video)
+        }
+        console.log(video)
+        return (
+            <div className = 'card-container'  >
+                {video ? 
+                    <video width="300" height="250" >
+                     <source src={imglink} type="video/mp4"/>
+                    </video>
+                    :
+                    <img alt="ima" src={imglink} />
+                }
+                <h1>{title}</h1>
+            </div>
+            
+        );
+    }
+    else{
+    let alt = "nuk ka imazhe"
+    return (
+        <div className = 'card-container'>
+            <img alt={alt} src="" />
+            <h1>{title}</h1>
+            
+        </div>
+        
+    );
+    }
+}
+
+export default Card;

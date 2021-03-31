@@ -1,0 +1,46 @@
+.container {
+    position: absolute;
+}
+.bg-opacity {
+    background-color: black;
+    opacity: 0.5 ;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 98;
+
+}
+.bg {
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 1000px;
+    height: 1200px;
+    background-color: brown;
+    
+    z-index: 99;
+    
+}
+
+.bg2 {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    
+    width: 600px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    background-color: #03503E;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p {
+    font-size: 1.3rem;
+}
