@@ -19,7 +19,6 @@ function App() {
           setIsLoaded(true);
           setImages(result.data);
             
-          console.log(result.data)
           setIsLoaded(true);
         // eslint-disable-next-line
     },[url])
